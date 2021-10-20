@@ -1,0 +1,5 @@
+mutation toggleStatus ($toggleable: ID, $status: Status) {
+	toggleStatus (toggleable: $toggleable, status: $status) {
+		status
+	}
+}

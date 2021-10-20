@@ -1,0 +1,5 @@
+mutation resendOrderEmail ($order: String!) {
+  resendOrderEmail (order: $order) {
+    id
+  }
+}

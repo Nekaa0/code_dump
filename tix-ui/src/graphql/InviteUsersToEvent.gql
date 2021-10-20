@@ -1,0 +1,15 @@
+mutation inviteUsersToEvent ($id: ID, $senderName: String, $subject: String, $from: String, $recipients: [String], $inviteesMessage: String!, $testCC: String, $testing: Boolean) {
+	inviteUsersToEvent (ticket: $id, senderName: $senderName, subject: $subject, from: $from, recipients: $recipients, inviteesMessage: $inviteesMessage, testCC: $testCC, testing: $testing) {
+		about
+    createdAt
+    id
+    limit
+    name
+    perks
+    price
+    status
+    unlimited
+    inviteOnly
+    inviteesMessage
+	}
+}

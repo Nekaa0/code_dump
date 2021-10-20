@@ -1,0 +1,5 @@
+mutation deleteCustomField ($id: ID) {
+	deleteCustomField (customField: $id) {
+    id
+  }
+}

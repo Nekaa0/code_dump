@@ -1,0 +1,10 @@
+mutation sendCustomEmail ($id: ID, $senderName: String, $content: String,  $subject: String, $from: String, $to: String, $testCC: String, $testing: Boolean) {
+ sendCustomEmail (event: $id, customEmailDetails: { senderName: $senderName, content: $content, subject: $subject, from: $from, to: $to, testCC: $testCC, testing: $testing}) {
+   senderName
+   subject
+   content
+   to
+   from
+   testCC
+ }
+}

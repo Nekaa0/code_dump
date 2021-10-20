@@ -1,0 +1,36 @@
+mutation buy ($order: ID, $invitee : ID, $buyer: String, $reference: String!) {
+	buy (order: $order, invitee: $invitee, buyer: $buyer, reference: $reference) {
+		id
+    shortId
+    createdAt
+    buyerEmail
+    buyerFirstName
+    buyerLastName
+    buyerPhoneNumber
+    price
+    quantity
+    status
+    qrCodes
+    qrCodeNos
+    ticketSchedules {
+      edges {
+        node {
+          quantityOrdered
+          priceOrdered
+          ticket {
+            name
+            event {
+              user {
+                id
+                firstName
+                lastName
+                email
+              }
+            }
+          }
+        }
+      }
+    }
+    cardDetails
+	}
+}

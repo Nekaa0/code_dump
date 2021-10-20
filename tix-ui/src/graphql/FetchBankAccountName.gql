@@ -1,0 +1,5 @@
+query fetchBankAccountName ($accountNumber: String!, $bankCode: String!) {
+  fetchBankAccountName(accountNumber: $accountNumber, bankCode: $bankCode) {
+    accountName
+  }
+}

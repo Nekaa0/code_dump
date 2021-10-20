@@ -1,0 +1,23 @@
+mutation acceptMembershipRequest ($request: ID, $accept: Boolean!) {
+	acceptMembershipRequest (request: $request, accept: $accept) {
+    ... on Membership {
+      id
+      admin
+      createdAt
+      organization {
+        id
+        name
+        description
+      }
+      user {
+        firstName
+        lastName
+        email
+      }
+    }
+    ... on MembershipRejected {
+      id
+      message
+    }
+	}
+}

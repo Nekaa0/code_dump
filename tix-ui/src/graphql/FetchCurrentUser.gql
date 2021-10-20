@@ -1,0 +1,42 @@
+query currentUser {
+  currentUser {
+    id
+    createdAt
+    email
+    firstName
+    lastName
+    isSeller
+    verified
+    phone
+    accountType
+    noOfFreeEvents
+    noOfPaidEvents
+    subscriptionState
+    country
+    paymentProvider
+    currencyShortForm
+    bank {
+      currency
+    }
+    bankAccount {
+      accountNumber
+      accountName
+    }
+    verifications {
+      state
+      verificationType
+    }
+		events {
+      edges {
+        node {
+          id
+          hasAPaidTicket
+          slug
+        }
+      }
+    }
+    interests {
+      name
+    }
+  }
+}

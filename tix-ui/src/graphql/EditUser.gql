@@ -1,0 +1,16 @@
+mutation editUser ( $firstName: String!, $lastName: String, $phone: String) {
+	editUser (userInput: { firstName: $firstName, lastName: $lastName, phone: $phone}) {
+		id
+    createdAt
+    email
+    firstName
+    lastName
+    isSeller
+    verified
+    phone
+    verifications {
+      state
+      verificationType
+    }
+	}
+}

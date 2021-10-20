@@ -1,0 +1,9 @@
+query {
+  fetchPaystackSubscriptionPlans {
+      id
+      name
+      plan_code
+      interval
+      amount
+  }
+}

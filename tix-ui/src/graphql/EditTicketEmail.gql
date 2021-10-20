@@ -1,0 +1,21 @@
+mutation editTicketEmail ($id: ID, $customTicketMessage: String, $testCC: String, $testEmail: Boolean) {
+	editTicketEmail (event: $id, customTicketMessage: $customTicketMessage, testCC: $testCC, testEmail: $testEmail) {
+		id
+    slug
+    status
+    title
+    description
+    address
+    addressTips
+    lng
+    lat
+    startDate
+    endDate
+    twitter
+    facebook
+    website
+    headerImage
+    customTicketMessage
+    ticketsVariation
+	}
+}

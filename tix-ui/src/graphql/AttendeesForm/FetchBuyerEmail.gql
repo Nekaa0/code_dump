@@ -1,0 +1,8 @@
+query fetchBuyerEmail ($slug: String!) {
+	findBySlug (slug: $slug) {
+		... on Event {
+			id
+			attendeesEmails
+		}
+	}
+}

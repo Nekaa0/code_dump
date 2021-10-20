@@ -1,0 +1,10 @@
+query {
+  fetchSubscription {
+    id
+    nextPaymentDate
+    last_four_digits
+    frequency
+    amount
+    nextBillingRetryDate
+  }
+}

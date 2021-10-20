@@ -1,0 +1,6 @@
+mutation createExternalMeeting ($event: ID, $link: String!) {
+	createExternalMeeting (meeting: { event: $event, link: $link}) {
+    id
+    link
+	}
+}

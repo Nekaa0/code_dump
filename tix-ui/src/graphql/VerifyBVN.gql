@@ -1,0 +1,8 @@
+mutation verifyBvn ($bvn: String!, $dateOfBirth: String!) {
+  verifyBvn (bvn: $bvn, dateOfBirth: $dateOfBirth) {
+    firstName
+    lastName
+    email
+    phone
+  }
+}

@@ -1,0 +1,6 @@
+mutation completePhoneVerification ($otp: String!) {
+	completePhoneVerification (otp: $otp) {
+		id
+		email
+	}
+}

@@ -1,0 +1,25 @@
+mutation editTicket ($id: ID, $name: String!, $about: String!, $perks: String, $limit: Int!, $price: FloatType, $unlimited: Boolean, $transferFees: Boolean, $status: TicketStatus, $inviteOnly: Boolean, $customFields: [CustomFieldInputType]) {
+	editTicket (ticket: $id, ticketInput: { name: $name, about: $about, perks: $perks, limit: $limit, price: $price, unlimited: $unlimited, transferFees: $transferFees, status: $status, inviteOnly: $inviteOnly, customFields: $customFields }) {
+		about
+    createdAt
+    id
+    limit
+    name
+    perks
+    price
+    status
+    unlimited
+    inviteOnly
+    inviteesMessage
+    transferFees
+    customFields {
+      edges {
+        node {
+          id
+          question_text
+          required
+        }
+      }
+    }
+	}
+}

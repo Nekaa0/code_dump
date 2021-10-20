@@ -1,0 +1,23 @@
+query events {
+	currentUser {
+    id
+		events {
+      edges {
+        node {
+          id
+          slug
+          status
+          title
+          description
+          address
+          startDate
+          endDate
+          headerImage
+          ticketsSold
+          ticketsVariation
+          eventType
+        }
+      }
+    }
+	}
+}

@@ -1,0 +1,12 @@
+mutation setBankAccount ($eventOwner: ID, $accountNumber: String!, $accountName: String!, $bankCode: String!) {
+  setBankAccount (bankAccount: {eventOwner: $eventOwner, accountNumber: $accountNumber, accountName: $accountName, bankCode: $bankCode}) {
+    id
+    accountName
+    accountNumber
+    bankCode
+    bankName
+    user {
+      id
+    }
+  }
+}

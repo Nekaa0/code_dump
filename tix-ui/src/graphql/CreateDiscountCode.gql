@@ -1,0 +1,16 @@
+mutation createDiscountCode ($code: String!, $codeType: String!, $feeType: String!, $value: FloatType, $limit: Int, $unlimited: Boolean!, $minimumUse: Int, $minimumFee: FloatType, $startDate: Int!, $endDate: Int, $event: ID, $ticket: ID) {
+	createDiscountCode (discountCodeInput: { code: $code, codeType: $codeType, feeType: $feeType, value: $value, limit: $limit, unlimited: $unlimited, minimumUse: $minimumUse, minimumFee: $minimumFee, startDate: $startDate, endDate: $endDate, event: $event, ticket: $ticket}) {
+		id
+    code
+    codeType
+    feeType
+    value
+    limit
+    unlimited
+    discountUsage
+    minimumUse
+    minimumFee
+    startDate
+    endDate
+	}
+}

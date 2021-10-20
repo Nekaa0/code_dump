@@ -1,0 +1,12 @@
+mutation signUp ($firstName: String!, $lastName: String!, $country: SupportedCountries!, $accountType: String!, $email: String!, $password: String!, $referralToken: String) {
+	signUp (registrationDetails: { firstName: $firstName, country: $country, lastName: $lastName, accountType: $accountType, email: $email, password: $password, referralToken: $referralToken }) {
+		id
+		email
+		country
+		firstName
+		lastName
+		isSeller
+		createdAt
+		updatedAt
+	}
+}

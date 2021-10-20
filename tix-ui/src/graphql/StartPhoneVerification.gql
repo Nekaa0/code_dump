@@ -1,0 +1,6 @@
+mutation startPhoneVerification ($call: Boolean!) {
+  startPhoneVerification (call: $call) {
+    id
+    email
+  }
+}

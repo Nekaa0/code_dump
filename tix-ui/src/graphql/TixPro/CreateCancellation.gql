@@ -1,0 +1,5 @@
+mutation createCancellation ($cancellationReason: ID, $customCancellationReason: String) {
+	createCancellation (cancellation: { cancellationReason: $cancellationReason, customCancellationReason: $customCancellationReason }) {
+		id
+	}
+}

@@ -1,0 +1,15 @@
+query fetchPaymentHistory ($slugOrCustomName: String!) {
+  fetchPaymentHistory(slugOrCustomName: $slugOrCustomName) {
+    paymentData {
+      edges {
+        node {
+          recipient
+          bankDetail
+          transferFee
+          payout
+          paymentDate
+        }
+      }
+    }
+  }
+}

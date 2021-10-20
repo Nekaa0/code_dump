@@ -1,0 +1,44 @@
+query findBySlug ($slug: String!, $status: String!, $first_cursor: String, $last_cursor: String, $first_limit: Int, $last_limit: Int) {
+  findBySlug(slug:$slug) {
+    ... on Event {
+        id
+        orderTicketSchedules(status: $status, first: $first_limit, after: $last_cursor, last: $last_limit, before: $first_cursor) {
+          totalCount
+          pageInfo {
+            hasPreviousPage
+            hasNextPage
+        	}
+          edges {
+            cursor
+            node {
+              id
+              quantity
+              price
+              createdAt
+              order {
+                id
+                shortId
+                buyerFirstName
+                buyerLastName
+                buyerEmail
+                buyerPhoneNumber
+                qrCodes
+              }
+              ticketSchedule {
+                ticket {
+                  id
+                  name
+                  tixFees
+                }
+                schedule {
+                  id
+                  startDate
+                  endDate
+                }
+              }
+            }
+          }
+      }
+    }
+  }
+}

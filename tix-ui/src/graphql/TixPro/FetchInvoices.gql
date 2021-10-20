@@ -1,0 +1,22 @@
+query ($first_cursor: String, $last_cursor: String, $first_limit: Int, $last_limit: Int) {
+  fetchInvoices {
+  	invoices(first: $first_limit, after: $last_cursor, last: $last_limit, before: $first_cursor) {
+    totalCount
+      pageInfo {
+        hasPreviousPage
+        hasNextPage
+      }
+      edges {
+        cursor
+        node{
+          id
+          amountKobo
+          endDate
+          shortId
+          subscriptionType
+          createdAt
+        }
+      }
+    }
+  }
+}

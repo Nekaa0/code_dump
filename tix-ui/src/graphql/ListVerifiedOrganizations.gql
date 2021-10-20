@@ -1,0 +1,26 @@
+query organizations {
+	currentUser {
+    id
+    defaultOrganization {
+      id
+      name
+    }
+		verified_organizations {
+      edges {
+        node {
+          id
+          slug
+          name
+          description
+          phone
+          facebook
+          twitter
+          website
+          logo
+          createdAt
+          verified
+        }
+      }
+    }
+	}
+}

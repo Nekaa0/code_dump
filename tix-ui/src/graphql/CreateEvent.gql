@@ -1,0 +1,25 @@
+mutation createEvent ($title: String!, $description: String, $customName: String, $address: String, $addressTips: String, $lng: FloatType, $lat: FloatType, $startDate: Int!, $endDate: Int!, $twitter: String, $instagram: String, $facebook: String, $website: String, $headerImage: String!, $styles: Json, $eventType: String!, $interest: ID, $repeats: Int!, $frequency: EventFrequency!) {
+	createEvent (event: { title: $title, description: $description, customName: $customName, address: $address, addressTips: $addressTips, lng: $lng, lat: $lat, startDate: $startDate, endDate: $endDate, twitter: $twitter, instagram: $instagram, facebook: $facebook, website: $website, headerImage: $headerImage, styles: $styles, eventType: $eventType, interest: $interest, repeats: $repeats, frequency: $frequency }) {
+		id
+    slug
+    status
+    title
+    description
+    address
+    addressTips
+    lng
+    lat
+    startDate
+    endDate
+    twitter
+    instagram
+    facebook
+    website
+    headerImage
+    ticketsVariation
+    eventType
+    interest{id}
+    frequency
+    repeats
+	}
+}

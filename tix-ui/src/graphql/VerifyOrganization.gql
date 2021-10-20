@@ -1,0 +1,6 @@
+mutation submitOrganizationVerificationDetails ($companyRegistrationNumber: String, $payment_method: String!, $accountName: String!, $accountNumber: String!, $bankCode: String!) {
+  submitOrganizationVerificationDetails (companyRegistrationNumber: $companyRegistrationNumber, payment_method: $payment_method, bankAccountDetails: { accountNumber: $accountNumber, accountName: $accountName, bankCode: $bankCode}) {
+    id
+    approved
+  }
+}

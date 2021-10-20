@@ -1,0 +1,17 @@
+query organization ($slug: String!) {
+	findBySlug (slug: $slug) {
+		... on Organization {
+			id
+      name
+      description
+      slug
+      phone
+      website
+      logo
+      facebook
+      twitter
+      verified
+      email
+		}
+	}
+}

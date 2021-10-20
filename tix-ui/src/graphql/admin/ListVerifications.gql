@@ -1,0 +1,14 @@
+mutation organizationVerificationRequests {
+  allOrganizationVerificationRequests {
+    id
+    accountNumber
+    accountName
+    approved
+    registrationDocument
+    organization {
+      id
+      name
+      description
+    }
+  }
+}

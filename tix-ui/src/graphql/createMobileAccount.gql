@@ -1,0 +1,6 @@
+mutation createOrUpdateMobileAccount($mobile_provider_name: MobileProviders!, $phone_number: String!){
+  createOrUpdateMobileAccount(mobile_provider_name: $mobile_provider_name, phone_number: $phone_number){
+    id
+    mobile_provider_name
+  }
+}

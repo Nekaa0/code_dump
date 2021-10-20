@@ -1,0 +1,6 @@
+mutation createInternalMeeting ($eventSlug: String!) {
+	createInternalMeeting (meeting: { eventSlug: $eventSlug }) {
+        id
+        joinUrl
+	}
+}

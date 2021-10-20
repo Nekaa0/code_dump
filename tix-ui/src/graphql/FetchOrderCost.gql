@@ -1,0 +1,3 @@
+query orderCost ($ticketsInfo: [OrderInputType], $buyerEmail: String, $buyerFirstName: String!, $buyerLastName: String!, $buyerPhoneNumber: String!, $discountCode: ID) {
+  orderCost (ticketsInfo: $ticketsInfo, buyer: { buyerEmail: $buyerEmail, buyerFirstName: $buyerFirstName, buyerLastName: $buyerLastName, buyerPhoneNumber: $buyerPhoneNumber }, discountCode: $discountCode)
+}

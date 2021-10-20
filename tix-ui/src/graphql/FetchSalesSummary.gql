@@ -1,0 +1,15 @@
+query fetchSalesSummary ($slugOrCustomName: String!) {
+  fetchSalesSummary (slugOrCustomName: $slugOrCustomName) {
+    ticketsSalesData {
+			edges {
+				node {
+          ticketName
+          quantitySold
+          salesRevenue
+          tixFees
+          payout
+      }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+query fetchPayoutDate ($slugOrCustomName: String!) {
+  fetchPayoutDate (slugOrCustomName: $slugOrCustomName) {
+    payoutDate
+  }
+}

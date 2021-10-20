@@ -1,0 +1,21 @@
+query fetchDiscountCodes($event: ID, $slugOrCustomName: String, $code: String, $codeType: String) {
+  fetchDiscountCodes(event: $event, slugOrCustomName: $slugOrCustomName, code: $code, codeType: $codeType) {
+    id
+    code
+    codeType
+    feeType
+    value
+    limit
+    unlimited
+    discountUsage
+    minimumUse
+    minimumFee
+    startDate
+    endDate
+    status
+    ticket {
+      id
+      name
+    }
+  }
+}

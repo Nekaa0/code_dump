@@ -1,0 +1,3 @@
+query inviteClaimed ($ticket: ID, $invitee: ID) {
+	inviteClaimed (ticket: $ticket, invitee: $invitee)
+}

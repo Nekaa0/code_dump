@@ -1,0 +1,86 @@
+query publicEvents ($slugOrCustomName: String!) {
+	publicEvents (slugOrCustomName: $slugOrCustomName) {
+		events {
+			edges {
+				node {
+					id
+					slug
+					status
+					title
+					description
+					address
+					addressTips
+					lng
+					lat
+					startDate
+					endDate
+					twitter
+					instagram
+					facebook
+					website
+					headerImage
+					ticketsVariation
+          repeats
+    			interest{id}
+					user {
+						id
+						firstName
+						lastName
+						email
+						paymentProvider
+						country
+						bank {
+							currency
+						}
+						currencyShortForm
+					}
+					subscriptionPlan {
+						plan
+					}
+					tickets {
+						edges {
+							node {
+								about
+								createdAt
+								id
+								limit
+								name
+								perks
+								price
+								status
+								unlimited
+								inviteOnly
+								inviteesMessage
+								transferFees
+								priceWithFees
+								customFields {
+									edges {
+										node {
+											id
+											question_text
+											required
+										}
+									}
+								}
+                ticketSchedules {
+                  edges {
+                    node {
+                      id
+                      limit
+                      unlimited
+                      schedule {
+                        id
+                        startDate
+                        endDate
+                      }
+                    }
+                  }
+                }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,6 @@
+query {
+  cancellationReasons {
+    id
+		reason
+  }
+}

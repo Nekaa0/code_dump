@@ -1,0 +1,5 @@
+mutation createUpdateInterest($interestChoices: [InterestInputType]) {
+  createUpdateInterest(interestChoices: $interestChoices) {
+    name
+  }
+}

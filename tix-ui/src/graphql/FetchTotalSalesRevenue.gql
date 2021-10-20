@@ -1,0 +1,5 @@
+query fetchTotalSalesRevenue ($slugOrCustomName: String!) {
+  fetchTotalSalesRevenue (slugOrCustomName: $slugOrCustomName) {
+    totalSalesRevenue
+  }
+}

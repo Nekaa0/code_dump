@@ -1,0 +1,12 @@
+mutation createMembershipRequest ($organization: ID, $toEmail: String!, $setAdmin: Boolean!) {
+	createMembershipRequest (request: { organization: $organization, toEmail: $toEmail, setAdmin: $setAdmin }) {
+		id
+    organization {
+      name
+      description
+    }
+    setAdmin
+    toEmail
+    createdAt
+	}
+}

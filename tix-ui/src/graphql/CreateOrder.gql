@@ -1,0 +1,36 @@
+mutation createOrder ($ticketsInfo: [OrderInputType], $invitee: ID, $buyerEmail: String, $buyerFirstName: String!, $buyerLastName: String!, $buyerPhoneNumber: String!, $orderAnswers: [OrderAnswerInputType], $orderRecipients: [OrderRecipientInputType], $discountCode: ID) {
+	createOrder (ticketsInfo: $ticketsInfo, buyer: { buyerEmail: $buyerEmail, invitee: $invitee, buyerFirstName: $buyerFirstName, buyerLastName: $buyerLastName, buyerPhoneNumber: $buyerPhoneNumber }, orderAnswers: $orderAnswers, orderRecipients: $orderRecipients, discountCode: $discountCode) {
+		id
+		shortId
+    createdAt
+    buyerEmail
+    buyerFirstName
+    buyerLastName
+    buyerPhoneNumber
+    price
+    quantity
+    status
+    qrCodes
+    qrCodeNos
+    ticketSchedules {
+      edges {
+        node {
+          quantityOrdered
+          priceOrdered
+          ticket {
+            name
+            price
+            event {
+              user {
+                id
+                firstName
+                lastName
+                email
+              }
+            }
+          }
+        }
+      }
+    }
+	}
+}

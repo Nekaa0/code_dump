@@ -1,0 +1,5 @@
+mutation deleteDiscountCode ($id: ID) {
+	deleteDiscountCode (discount_code: $id) {
+    id
+  }
+}

@@ -1,0 +1,11 @@
+mutation updateOrganizationInfo ($token: String!, $email: String!, $password: String!) {
+	updateOrganizationInfo (confirmationToken: $token, email: $email, password: $password) {
+		id
+		email
+		firstName
+		lastName
+		isSeller
+		createdAt
+		updatedAt
+	}
+}

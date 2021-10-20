@@ -1,0 +1,6 @@
+mutation updateOrderNotificationSettings ( $setting: SettingsFrequency) {
+  updateOrderNotificationSettings (setting: {setting: $setting}) {
+    id
+    notifications
+  }
+}

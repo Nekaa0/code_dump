@@ -1,0 +1,3 @@
+query validDiscountCode ($ticketsInfo: [OrderInputType], $event: ID, $code: String!) {
+  validDiscountCode(ticketsInfo: $ticketsInfo, event: $event, code: $code)
+}

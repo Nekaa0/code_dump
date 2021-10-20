@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+    - image: circleci/node:10.2.1
+    steps:
+    - checkout
+    - restore_cache:
+        key: tix-ui-{{ checksum "package.json" }}
+    - run:
+        name: Install npm dependencies
+        command: npm install
+    - save_cache:
+        key: tix-ui-{{ checksum "package.json" }}
+        paths:
+        - ./node_modules
+    - run:
+        name: Run unit tests
+        command: npm test

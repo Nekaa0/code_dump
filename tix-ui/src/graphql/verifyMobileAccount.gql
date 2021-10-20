@@ -1,0 +1,5 @@
+mutation VerifyPhoneNumber($otp: String!) {
+  VerifyPhoneNumber(otp: $otp) {
+    phone
+  }
+}

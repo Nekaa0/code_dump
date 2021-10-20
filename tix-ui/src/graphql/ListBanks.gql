@@ -1,0 +1,8 @@
+query banks {
+  banks {
+    id
+    code
+    name
+  }
+}
+

@@ -1,0 +1,26 @@
+{
+  "presets": [["babel-preset-env", { "modules": false }]],
+  "plugins": [
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "~src/theme/lib"
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "babel-preset-env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+mutation editEvent ($id: ID, $title: String, $description: String, $customName: String, $address: String, $addressTips: String, $lng: FloatType, $lat: FloatType, $startDate: Int, $endDate: Int, $twitter: String, $instagram: String, $facebook: String, $website: String, $headerImage: String, $styles: Json, $interest: ID $repeats: Int!, $frequency: EventFrequency!) {
+	editEvent (event: $id, eventInput: { title: $title, description: $description, customName: $customName, address: $address, addressTips: $addressTips, lng: $lng, lat: $lat, startDate: $startDate, endDate: $endDate, twitter: $twitter, instagram: $instagram, facebook: $facebook, website: $website, headerImage: $headerImage, styles: $styles, interest: $interest, repeats: $repeats, frequency: $frequency }) {
+		id
+    slug
+    status
+    title
+    description
+    customName
+    address
+    addressTips
+    lng
+    lat
+    startDate
+    endDate
+    twitter
+    instagram
+    facebook
+    website
+    headerImage
+    customTicketMessage
+    ticketsVariation
+    interest{id}
+    frequency
+    repeats
+	}
+}

@@ -1,0 +1,34 @@
+mutation confirmOrder ($order: ID!) {
+	confirmOrder (order: $order) {
+		id
+    shortId
+    createdAt
+    buyerEmail
+    buyerFirstName
+    buyerLastName
+    buyerPhoneNumber
+    price
+    quantity
+    status
+    qrCodes
+    qrCodeNos
+    tickets {
+      edges {
+        node {
+          name
+          quantityOrdered
+          priceOrdered
+          event {
+            user {
+              id
+              firstName
+              lastName
+              email
+            }
+          }
+        }
+      }
+    }
+    cardDetails
+	}
+}

@@ -1,0 +1,6 @@
+mutation createZoomAccount ($eventSlug: String!, $code: String!) {
+	createZoomAccount (meeting: { eventSlug: $eventSlug, code: $code }) {
+        id
+        code
+	}
+}

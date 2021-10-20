@@ -1,0 +1,5 @@
+mutation deleteTicket ($id: ID) {
+	deleteTicket (ticket: $id) {
+    id
+  }
+}

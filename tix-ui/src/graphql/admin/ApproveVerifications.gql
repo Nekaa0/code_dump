@@ -1,0 +1,7 @@
+mutation approveOrganizationVerificationRequest ($organization: ID) {
+  approveOrganizationVerificationRequest (organization: $organization) {
+    id
+    name
+    description
+  }
+}

@@ -1,0 +1,6 @@
+mutation settlementSettings ( $setting: SettingsFrequency) {
+  settlementSettings (setting: {setting: $setting}) {
+    id
+    settlements
+  }
+}

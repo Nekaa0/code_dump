@@ -1,0 +1,14 @@
+mutation editOrganization ($id: ID, $name: String!, $description: String!, $phone: String!, $facebook: String, $twitter: String, $website: String, $logo: String) {
+  editOrganization (organization: $id, organizationInput: {name: $name, description: $description, phone: $phone, facebook: $facebook, twitter: $twitter, website: $website, logo: $logo}) {
+    id
+    name
+    description
+    slug
+    phone
+    website
+    logo
+    facebook
+    twitter
+    verified
+  }
+}

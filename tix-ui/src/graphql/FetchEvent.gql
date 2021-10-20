@@ -1,0 +1,89 @@
+query event ($slug: String!) {
+	findBySlug (slug: $slug) {
+		... on Event {
+			id
+			slug
+			status
+			title
+			description
+			customName
+			address
+			addressTips
+			lng
+			lat
+			startDate
+			endDate
+      frequency
+      repeats
+			twitter
+			instagram
+			eventType
+			facebook
+			website
+			headerImage
+			customTicketMessage
+      onlineEventType
+			ticketsVariation
+    	interest{id}
+			attendeesEmails
+			user {
+				id
+				firstName
+				lastName
+				email
+			}
+			tickets {
+				edges {
+					node {
+						id
+						createdAt
+						name
+						about
+						price
+						unlimited
+						limit
+						perks
+						status
+						buyers
+						inviteOnly
+						inviteesMessage
+						transferFees
+						priceWithFees
+            customFields {
+              edges {
+                node {
+									id
+                  question_text
+                  required
+                }
+              }
+            }
+            ticketSchedules {
+              edges {
+                node {
+                  id
+                  limit
+                  unlimited
+                  quantitySold
+                  schedule {
+										id
+                    startDate
+                    endDate
+                  }
+                }
+              }
+            }
+					}
+				}
+			}
+			externalMeeting {
+				link
+			}
+			internalMeeting {
+				joinUrl
+				startUrl
+				createdAt
+			}
+		}
+	}
+}

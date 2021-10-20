@@ -1,0 +1,25 @@
+mutation createTicket ($event: ID, $name: String!, $about: String!, $perks: String, $limit: Int!, $price: FloatType, $unlimited: Boolean, $status: TicketStatus, $transferFees: Boolean, $inviteOnly: Boolean, $customFields: [CustomFieldInputType]) {
+	createTicket (ticket: { event: $event, name: $name, about: $about, perks: $perks, limit: $limit, price: $price, unlimited: $unlimited, status: $status, transferFees: $transferFees, inviteOnly: $inviteOnly, customFields: $customFields }) {
+		about
+    createdAt
+    id
+    limit
+    name
+    perks
+    price
+    status
+    unlimited
+    inviteOnly
+    inviteesMessage
+    transferFees
+    customFields {
+      edges {
+        node {
+          id
+          question_text
+          required
+        }
+      }
+    }
+	}
+}

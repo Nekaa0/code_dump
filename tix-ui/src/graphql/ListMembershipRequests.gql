@@ -1,0 +1,21 @@
+query membershipRequests {
+	membershipRequests {
+    id
+    createdAt
+    organization {
+      id
+      name
+      description
+    }
+    setAdmin
+    toEmail
+    createdAt
+    user {
+      id
+      email
+      firstName
+      lastName
+    }
+  }
+}
+
