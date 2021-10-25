@@ -1,0 +1,29 @@
+version: 2.1
+
+orbs:
+  welcome: circleci/welcome-orb@0.4.1
+workflows:
+  welcome:
+    jobs:
+      - welcome/run
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.2.1
+    steps:
+      - checkout
+      - restore_cache:
+          key: tix-ui-{{ checksum "package.json" }}
+      - run:
+          name: Install npm dependencies
+          command: npm install
+      - save_cache:
+          key: tix-ui-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules   
+      - run:
+          name: Run unit tests
+          command: npm test
+      - run:
+          name: Run Cypress test
+          command: npx cypress run dashboardTest
